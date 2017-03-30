@@ -1,0 +1,24 @@
+index.html
+----------------------------------
+<script src="app/angular/angular.js"></script> -- > Angular Libraries should be added in the head of the index.html. Then only we can use the angular library components.
+
+<script src="app/app.js"></script>
+<script src="app/js/controllers/MainController.js"></script>
+Need to add/configure  all the angular components like module|controller|directives to the index.html
+
+<div ng-app=""  ng-controller="">
+The particular div or section can have the access to angular app and the controller mentioned
+----------------------------------
+app.js
+var app = angular.module('myApp',[]);
+
+Angular module needs to be declared with a name. That variable should be used in the controllers/MainController . If we want to inject other components like angular-animate , ngMessage that should be passed as the dependency in the form of Array.
+
+---------------------------------
+MainController.js
+
+app.controller('MainController',function($rootScope,$rootScope)
+
+We need to send dependencies as function parameters.
+
+--------------------------------

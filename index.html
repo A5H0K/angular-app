@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test Angular App</title>
+	<script src="app/angular/angular.js"></script>
+	<script src="app/app.js"></script>
+	<script src="app/js/controllers/MainController.js"></script>
+</head>
+<body>
+	<div ng-app="myApp" ng-controller="MainController">
+		Enter your Name : <input type="text" ng-model="name" placeholder="your name">
+		<div ng-show="name">
+			<h2>This is called Two way binding :: {{name}}</h2>
+		</div>
+	</div>
+
+</body>
+</html>
